@@ -23,7 +23,7 @@ contract Hack {
 // kaynakça : https://www.evm.codes/playground
 //Kullanılan ingilizce kelimeler daha havalı olmak için değil =) bazı kelimeleri çevirmek, anlamayı zorlaştırıyordu.
 /*
-Runtime Code = Çalıştırılabilir bir kodu refere eder (makine kodu gördüğünde ne yapması gerektiğini anlar)
+Runtime Code = Çalıştırılabilir bir kodu refere eder (makine, kodu gördüğünde ne yapması gerektiğini anlar)
 
 PUSH -> Stack'in en üstüne verilen değeri yerleştirir
 
