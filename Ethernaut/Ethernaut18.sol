@@ -4,19 +4,15 @@ interface IMagicNum {
     function setSolver(address) external;
 }
 
-interface ISolver {
-    function whatIsTheMeaningOfLife() external view returns (uint256);
-}
-
-contract Hack {
-    constructor(IMagicNum target) {
+contract attacker {
+    constructor(IMagicNum m1) {
         bytes memory bytecode = hex"69602a60005260206000f3600052600a6016f3";
         address addr;
         assembly {
             // create(göndermek istediğimiz eth miktarı ,kodun bytecode içindeki başladığı nokta , kodun(kontratın) byte boyutu)
             addr := create(0, add(bytecode, 0x20), 0x13)
         }
-        target.setSolver(addr);
+        m1.setSolver(addr);
     }
 }
 
