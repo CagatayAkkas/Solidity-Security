@@ -3,7 +3,6 @@ pragma solidity ^0.8;
 
 interface IGood {
     function coin() external view returns (address);
-
     function requestDonation() external returns (bool enoughBalance);
 }
 
