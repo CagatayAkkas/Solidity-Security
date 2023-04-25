@@ -2,21 +2,11 @@ pragma solidity ^0.8;
 
 interface IWallet {
     function admin() external view returns (address);
-
     function proposeNewAdmin(address _newAdmin) external;
-
     function addToWhitelist(address addr) external;
-
     function deposit() external payable;
-
     function multicall(bytes[] calldata data) external payable;
-
-    function execute(
-        address to,
-        uint256 value,
-        bytes calldata data
-    ) external payable;
-
+    function execute(address to,uint256 value,bytes calldata data) external payable;
     function setMaxBalance(uint256 _maxBalance) external;
 }
 
