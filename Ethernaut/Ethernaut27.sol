@@ -1,5 +1,4 @@
-//forta detection bot yapıyor
-pragma solidity ^0.8;
+pragma solidity ^0.8.4;
 
 interface IGood {
     function coin() external view returns (address);
